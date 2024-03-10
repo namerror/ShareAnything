@@ -5,7 +5,7 @@
 <div class="container-fluid" style="margin-top: 2em;">
     <div class="row flex-xl-nowrap">
 
-        <div class="col-12 col-mid-3 col-xl-2"> <!-- sidebar-->
+        <div class="col-12 col-sm-3 col-mid-3 col-xl-2"> <!-- sidebar-->
             
             <input type="text" placeholder="Search e.g. IB" id="user-input">
 
@@ -17,7 +17,7 @@
             </ul>
         </div>
 
-        <div class="scrollable col-12 col-md-9 col-xl-8"> <!--main-->
+        <div class="scrollable col-12 col-sm-8 col-md-9 col-xl-8"> <!--main-->
             <h3>Showing: {% if category %}{{ category }}{% else %}all{% endif %}</h3>
             <div class="list-group">
                 {% for w in webpages %}
