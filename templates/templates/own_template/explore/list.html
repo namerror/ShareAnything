@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+{% for key, value in dict.items %}
+<div class="item">
+    <h3>{{ key }}</h3>
+    <ul class="category-list">
+        {% for x in value %}
+        <li>
+            <a href="{{ x.link }}">
+                <h4>{{ x }}</h4>
+                <h5>{{ x.get_description }}</h5>                
+            </a>
+        </li>
+        {% endfor %}            
+    </ul>
+</div>
+{% endfor %}
+</div>
+{% endblock %}

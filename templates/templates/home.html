@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-3">Hello!</h1>
+    <p class="lead">Welcome to ShareAnything, it might be your first visit, but it won't be your last.</p>
+    <hr class="my-4">
+    <p>We are committed to giving directions and creating a welcoming atmosphere for everyone, and everything</p>
+    <p>If you don't know what to do, I strongly suggest you <span style="font-weight: bold;">have a look around</span>,</p>
+    <p>or click the boring button below. (not recommended)</p>
+    <p class="lead">
+      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#learnmoreModal">
+        Learn more
+      </button>
+      <div class="modal fade" id="learnmoreModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Warning!</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              We will take you to a very boring page, do you still want to proceed?
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+              <a href="{% url 'about' %}" type="button" class="btn btn-primary">I'm a boring person, take me there</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </p>
+
+    <h3>Come and explore this place!</h3>
+    <p>Here we have a <a href="{% url 'explore:webpage_list' %}">list of websites</a>  you might find useful. Regardless of your occupation and interests, I'm sure you'll find something you like.</p>
+    <p>You can also try our <a href="{% url 'thoughts:post_list' %}">ShareYourThoughts</a> feature, which allows you to say anything anonymously.</p>
+    <p>Currently those are the only features we have, so you might see "in progress" when you click some links on this website. I can promise you that more updates will come!</p>
+    <p>Have fun!</p>
+</div>
+{% endblock %}
