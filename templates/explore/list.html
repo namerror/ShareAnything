@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container-fluid" style="margin-top: 2em;">
+    <div class="row flex-xl-nowrap">
+
+        <div class="col-12 col-mid-3 col-xl-2"> <!-- sidebar-->
+            
+            <input type="text" placeholder="Search e.g. IB" id="user-input">
+
+            <ul class="nav flex-column">
+                <li class="nav-item"><a href="{% url 'explore:webpage_list' %}" class="nav-link {% if not category %}active{% endif %}">All</a></li>
+                <div id="replaceable-content" class="scrollable">
+                    {% include "explore/categories-results-partial.html" %}
+                </div>
+            </ul>
+        </div>
+
+        <div class="scrollable col-12 col-md-9 col-xl-8"> <!--main-->
+            <h3>Showing: {% if category %}{{ category }}{% else %}all{% endif %}</h3>
+            <div class="list-group">
+                {% for w in webpages %}
+                <a href="{{ w.link }}" class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">{{ w }}</h5>
+                    </div>
+                    <p class="mb-1">{{ w.get_description }}</p>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

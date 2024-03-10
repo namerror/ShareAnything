@@ -1,0 +1,7 @@
+{% if categories %}
+    {% for c in categories %}
+    <li class="nav-item"><a href="{{ c.get_absolute_url }}" class="nav-link {% if c.slug == category.slug %}active{% endif %}">{{ c.name }}</a></li>
+    {% endfor %}
+{% else %}
+    <p>No categories found.</p>
+{% endif %}
