@@ -5,11 +5,14 @@
 <head>
 <title>Share Anything!</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="stylesheet" href="{% static 'bootstrap/simplex.css' %}">
+<link rel="stylesheet" href="{% static 'bootstrap/superhero.css' %}">
 <style>
-    .scrollable {
+    /* more than 575px (switching to sidebar) */
+    @media screen and (min-width: 576px) {
+        .scrollable {
         max-height: 600px;
         overflow-y: auto;
+        }
     }
 
 </style>
