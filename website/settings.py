@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-nezrofb+04q08@w2ptu%&0o)@y4hbm+1zg%&)prrn26fb4^$=1
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'https://website-lz2o.onrender.com',
+    'website-lz2o.onrender.com',
 ]
 
 
