@@ -5,6 +5,8 @@
     <h1 class="display-3">Hello!</h1>
     <p class="lead">Welcome to ShareAnything, it might be your first visit, but it won't be your last.</p>
     <hr class="my-4">
+    <a type="button" class="btn btn-success btn-lg" href="{% url 'explore:webpage_list_by_category' 'ib-resources' %}">IB Resources</a>
+    <a type="button" class="btn btn-danger btn-lg" href="{% url 'explore:webpage_list_by_category' 'ib-questionbank' %}">IB Questionbank</a>
     <p>We are committed to giving directions and creating a welcoming atmosphere for everyone, and everything</p>
     <p>If you don't know what to do, I strongly suggest you <span style="font-weight: bold;">have a look around</span>,</p>
     <p>or click the boring button below. (not recommended)</p>
