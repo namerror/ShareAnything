@@ -28,6 +28,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     'website-lz2o.onrender.com',
+    'leonlong.space',
 ]
 
 
